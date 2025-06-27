@@ -11,7 +11,7 @@ mongoose.connect(MONGO_URI).then(()=>{
 let app=express()
 app.use(express.json())
 app.use(cors({
-  origin: 'https://postmanagement1.netlify.app/'
+  origin: 'https://postmanagement1.netlify.app'
 }))
 app.use("/",rt)
 
