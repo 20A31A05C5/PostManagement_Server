@@ -10,7 +10,9 @@ mongoose.connect(MONGO_URI).then(()=>{
 })
 let app=express()
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: 'https://postmanagement1.netlify.app/'
+}))
 app.use("/",rt)
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
